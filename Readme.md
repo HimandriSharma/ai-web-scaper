@@ -11,5 +11,3 @@ AI Web Scraper is a Python-based project designed to scrape web data using advan
 - Utilizes AI for intelligent data extraction
 - Handles dynamic content and AJAX-loaded pages
 - Provides data in various formats (JSON, CSV, etc.)
-
-
