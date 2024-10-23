@@ -8,8 +8,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 def scrape_website(website):
     print ("Launching chrome drivers...")
     
-    # chrome_driver_path = "/app/chromedriver/chromedriver"
-    chrome_driver_path = "./chromedriver"
+    chrome_driver_path = "/app/chromedriver/chromedriver"
+    # chrome_driver_path = "./chromedriver"
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--headless=new")

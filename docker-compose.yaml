@@ -1,0 +1,30 @@
+# version: "3.3"
+
+services:
+  web:
+    build: .
+    ports: 
+      - 8501:8501
+
+    volumes:
+      - .:/app
+
+    networks:
+      - scraping
+
+  ollama:
+    build: ollama
+    ports:  
+      - 11434:11434
+    volumes:
+      - scrape-vol:./ollama
+    networks:
+      - scraping
+
+networks: 
+  scraping:
+    - driver: bridge
+
+volumes:
+  scrape-vol:
+    driver: local
