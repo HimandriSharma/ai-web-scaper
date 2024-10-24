@@ -13,8 +13,8 @@ RUN apt-get update && apt-get install -y wget zip curl
 # Pinning to a specific version of ChromeDriver and Chrome
 ARG CHROME_VERSION="126.0.6478.61"
 
-# Install Ollama
-RUN curl -fsSL https://ollama.com/install.sh | sh
+# # Install Ollama
+# RUN curl -fsSL https://ollama.com/install.sh | sh
 
 # # Start Ollama
 # RUN ollama start & \

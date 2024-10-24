@@ -3,28 +3,34 @@
 services:
   web:
     build: .
-    ports: 
+    ports:
       - 8501:8501
 
-    volumes:
-      - .:/app
+    # volumes:
+    #   - .:/app
 
     networks:
-      - scraping
+      - scrapenet
 
   ollama:
     build: ollama
-    ports:  
+    ports:
       - 11434:11434
     volumes:
-      - scrape-vol:./ollama
+      - scrapevol:/ollama
     networks:
-      - scraping
+      - scrapenet
+    # deploy:
+    #   resources:
+    #     limits:
+    #       memory: 6G
+    entrypoint: ["/usr/bin/bash","/pull-llama3.sh"]
 
-networks: 
-  scraping:
-    - driver: bridge
+
+networks:
+  scrapenet:
+    driver: bridge
 
 volumes:
-  scrape-vol:
+  scrapevol:
     driver: local
