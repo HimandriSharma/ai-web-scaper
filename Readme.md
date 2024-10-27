@@ -47,3 +47,6 @@ Alternatively, you can run both services together with:
 
 ## Contributing
 Feel free to fork this repository, make improvements, and submit pull requests. Contributions are always welcome!
+
+## Demo
+[Video Demo](https://www.loom.com/share/ece8f3ba4e9046e29eb06da333553459?sid=00060eb1-3843-429f-ac50-bd38600b7004)
